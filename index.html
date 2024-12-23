@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>TVA Tableau</h1>
+        <div class="fonction_principale">
+            <button type="submit" >Ajouter une ligne</button>
+            <button type="submit" >Supprimer une ligne</button>
+            <button type="submit" >Effacer les champs</button>
+        </div>
+    </header>
+    <main>
+        <table>
+            <th>Libellé</th>
+            <th>Prix HT</th>
+            <th>TVA</th>
+            <th>Prix TTC</th>
+            <th>Calculer</th>
+            <th>Effacer</th>
+            <th>Supprimer</th>
+            <tr>
+                <td>                    
+                    <input type="text" id="Libellé" name="Libellé" placeholder="flûte de pan">
+                </td>
+                <td>
+                    <input type="number" id="HT" name="HT" placeholder="PRIX HT">
+                </td>
+                <td>
+                    <select name="TVA" id="TVA">
+                        <option>TVA</option>
+                        <option>holla</option>
+                        <option>bonjour</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="Prix TTC" name="Prix TTC" placeholder="Prix TTC">
+                </td>
+                <td>
+                    <button type="submit">Calculer</button>
+                </td>
+                <td>
+                    <button type="submit">Effacer</button>
+                </td>
+                <td>
+                    <button type="submit">Supprimer</button>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

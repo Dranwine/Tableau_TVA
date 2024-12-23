@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+
+}
+
+.fonction_principale{
+    justify-items: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
