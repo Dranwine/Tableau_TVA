@@ -10,48 +10,55 @@
     <header>
         <h1>TVA Tableau</h1>
         <div class="fonction_principale">
-            <button type="submit" >Ajouter une ligne</button>
+            <button type="submit" id="Ajouter" >Ajouter une ligne</button>
             <button type="submit" >Supprimer une ligne</button>
             <button type="submit" >Effacer les champs</button>
         </div>
     </header>
     <main>
         <table>
-            <th>Libellé</th>
-            <th>Prix HT</th>
-            <th>TVA</th>
-            <th>Prix TTC</th>
-            <th>Calculer</th>
-            <th>Effacer</th>
-            <th>Supprimer</th>
-            <tr>
-                <td>                    
-                    <input type="text" id="Libellé" name="Libellé" placeholder="flûte de pan">
-                </td>
-                <td>
-                    <input type="number" id="HT" name="HT" placeholder="PRIX HT">
-                </td>
-                <td>
-                    <select name="TVA" id="TVA">
-                        <option>TVA</option>
-                        <option>holla</option>
-                        <option>bonjour</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="text" id="Prix TTC" name="Prix TTC" placeholder="Prix TTC">
-                </td>
-                <td>
-                    <button type="submit">Calculer</button>
-                </td>
-                <td>
-                    <button type="submit">Effacer</button>
-                </td>
-                <td>
-                    <button type="submit">Supprimer</button>
-                </td>
-            </tr>
+            <thead>
+                <tr>
+                    <th scope= "col" class="tableau">Libellé</th>
+                    <th scope= "col" class="tableau">Prix HT</th>
+                    <th scope= "col" class="tableau">TVA</th>
+                    <th scope= "col" class="tableau">Prix TTC</th>
+                    <th scope= "col" class="tableau">Calculer</th>
+                    <th scope= "col" class="tableau">Effacer</th>
+                    <th scope= "col" class="tableau">Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id ="first_line">
+                    <td class="tableau">                    
+                        <input type="text" id="Libellé" name="Libellé" value ="flute de pan" placeholder="flûte de pan">
+                    </td>
+                    <td class="tableau">
+                        <input type="number" id="HT" name="HT" value ="3.5" placeholder="PRIX HT">
+                    </td>
+                    <td class="tableau">
+                        <select name="TVA" id="TVA">
+                            <option>TVA</option>
+                            <option value = "0.05"> 5%</option>
+                            <option value = "0,2">20%</option>
+                        </select>
+                    </td>
+                    <td class="tableau">
+                        <input type="text" id="Prix TTC" name="Prix TTC" placeholder="Prix TTC">
+                    </td>
+                    <td class="tableau">
+                        <button type="submit">Calculer</button>
+                    </td>
+                    <td class="tableau">
+                        <button type="submit">Effacer</button>
+                    </td class="tableau">
+                    <td class="tableau">
+                        <button type="submit">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </main>
+    <script src="js_tableau.js  "></script>
 </body>
 </html>

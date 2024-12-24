@@ -4,11 +4,22 @@ h1{
 }
 
 .fonction_principale{
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: 2% auto;
+}
+
+th, td {
+    text-align: center;
+}
+
+
+.tableau{
+    border: 2px solid black;
 }
