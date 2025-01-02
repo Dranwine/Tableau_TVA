@@ -10,9 +10,9 @@
     <header>
         <h1>TVA Tableau</h1>
         <div class="fonction_principale">
-            <button type="submit" id="Ajouter" >Ajouter une ligne</button>
-            <button type="submit" >Supprimer une ligne</button>
-            <button type="submit" >Effacer les champs</button>
+            <button  id="Ajouter" >Ajouter une ligne</button>
+            <button  id = "Supprimer">Supprimer une ligne</button>
+            <button  id = "Efffacer">Effacer les champs</button>
         </div>
     </header>
     <main>
@@ -31,29 +31,29 @@
             <tbody>
                 <tr id ="first_line">
                     <td class="tableau">                    
-                        <input type="text" id="Libellé" name="Libellé" value ="flute de pan" placeholder="flûte de pan">
+                        <input type="text" class="Libelle" class = 'input' value="flute de pan">
                     </td>
                     <td class="tableau">
-                        <input type="number" id="HT" name="HT" value ="3.5" placeholder="PRIX HT">
+                        <input type="number" class="HT" class = 'input' value ="3.5" placeholder="PRIX HT">
                     </td>
                     <td class="tableau">
-                        <select name="TVA" id="TVA">
+                        <select class="TVA">
                             <option>TVA</option>
                             <option value = "0.05"> 5%</option>
                             <option value = "0,2">20%</option>
                         </select>
                     </td>
                     <td class="tableau">
-                        <input type="text" id="Prix TTC" name="Prix TTC" placeholder="Prix TTC">
+                        <input type="text" class="TTC" class = 'input' placeholder="Prix TTC">
                     </td>
                     <td class="tableau">
-                        <button type="submit">Calculer</button>
+                        <button class = "calculer">Calculer</button>
                     </td>
                     <td class="tableau">
-                        <button type="submit">Effacer</button>
+                        <button class="eff">Effacer</button>
                     </td class="tableau">
                     <td class="tableau">
-                        <button type="submit">Supprimer</button>
+                        <button class = "supp">Supprimer</button>
                     </td>
                 </tr>
             </tbody>
