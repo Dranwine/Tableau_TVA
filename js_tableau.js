@@ -11,14 +11,14 @@ btn_ajouter.addEventListener("click", Addligne)
 btn_supprimer.addEventListener("click", SuppLigne)
 btn_effacer.addEventListener("click", effacechamp)
 btn_calculer.addEventListener("click", calculer)
-btn_eff.addEventListener("click", eff)
-btn_supp.addEventListener("click", supp)
+btn_eff.addEventListener("click", eff_ligne)
+btn_supp.addEventListener("click", supp_ligne)
 
 function Addligne(){
     let ligne_a_dupliquer = document.querySelector("#first_line").cloneNode(true)
     ligne_a_dupliquer.querySelector(".calculer").addEventListener("click", calculer)
-    ligne_a_dupliquer.querySelector(".eff").addEventListener("click", eff)
-    ligne_a_dupliquer.querySelector(".supp").addEventListener("click", supp)
+    ligne_a_dupliquer.querySelector(".eff").addEventListener("click", eff_ligne)
+    ligne_a_dupliquer.querySelector(".supp").addEventListener("click", supp_ligne)
     ligne_a_dupliquer.id = ""
     ligne_a_dupliquer.querySelector(".Libelle").value = ""
     ligne_a_dupliquer.querySelector(".HT").value = ""
@@ -51,7 +51,7 @@ function SuppLigne(){
 }
 
 
-function effacechamp(event){
+function effacechamp(){
     let effacer_les_ligne = document.querySelectorAll("input")
     effacer_les_ligne.forEach(input=>{
         input.value = ""
@@ -62,18 +62,33 @@ function effacechamp(event){
     })
 }
 
-function eff(event){
-    let eff_ligne = event.target
+function eff_ligne(event){
+    let bouton = event.target
+    let eff_champ = bouton.parentElement.parentElement.querySelectorAll(".input")
+    console.log(eff_champ)
+    eff_champ.forEach(input=>{
+        input.value = ""
+    })
+    // let selects = bouton.parentElement.parentElement.querySelectorAll('.TVA');
+    // selects.forEach(select => {
+    //     select.selectedIndex = 0
+    // })
 
 }
 
-function supp(event){
+function supp_ligne(event){
     let bouton = event.target
-    console.log(bouton.parentElement.parentElement)
     let supp_ligne = bouton.parentElement.parentElement
     supp_ligne.remove()
 }
 
-function calculer(){
-    let calculer_ligne = event.target
+function calculer(event){
+    let bouton = event.target
+    let HT = parseFloat(bouton.parentElement.parentElement.querySelector(".HT").value)
+    console.log(bouton.parentElement.parentElement.querySelector(".HT").value)
+    let TVA = parseFloat(bouton.parentElement.parentElement.querySelector('.TVA').value)
+    console.log(bouton.parentElement.parentElement.querySelector(".TVA").value)
+    let calcul = (HT*TVA)+HT
+    console.log(calcul)
+    bouton.parentElement.parentElement.querySelector(".TTC").value = calcul.toFixed(2)
 }
